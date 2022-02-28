@@ -1,0 +1,85 @@
+// Color Variables
+$color-primary-lightest: #feffff;
+$color-primary-light: #def2f1;
+$color-primary: #3aafa9;
+$color-primary-dark: #2d7a78;
+$color-primary-darkest: #17252a;
+
+$color-black: #101d2c;
+
+// FONT VARIABLES
+$font-heading: 'Mulish', sans-serif;
+$font-display: 'Space Mono', monospace;
+$font-word: 'Caveat', cursive;
+
+// Carousel Variables
+$size-height: 70vh;
+$size-width: 100%;
+
+// Media Query Mixins
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media (max-width: 37.5em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-port {
+    @media (max-width: 56.25em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-land {
+    @media (max-width: 75em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == big-desktop {
+    @media (min-width: 112.5em) {
+      @content;
+    }
+  }
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+
+  @include respond(tab-land) {
+    font-size: 56.25%;
+  }
+
+  @include respond(tab-port) {
+    font-size: 50%;
+  }
+
+  @include respond(big-desktop) {
+    font-size: 75%;
+  }
+}
+
+body {
+  font-family: $font-display;
+  color: $color-primary;
+  background-color: $color-primary-light;
+
+  @include respond(tab-land) {
+  }
+
+  @include respond(tab-port) {
+  }
+
+  @include respond(phone) {
+  }
+}
