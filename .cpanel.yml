@@ -2,4 +2,4 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home3/cwdmecom/public_html/
-    - /bin/cp -R cwdme-v1 $DEPLOYPATH
+    - /bin/cp -R * $DEPLOYPATH
