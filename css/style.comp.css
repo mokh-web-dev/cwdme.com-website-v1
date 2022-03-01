@@ -30,7 +30,7 @@ body {
   text-align: center;
   padding: 0;
   margin: 0;
-  background-image: url(../img/texture-bg.jpg);
+  background-image: url(../img/swirl-bg.jpg);
   background-size: cover;
   width: 100%; }
   .heading-hero .logo-animation {
@@ -40,75 +40,73 @@ body {
   .heading-hero__logo {
     position: relative;
     width: 20rem;
-    filter: drop-shadow(0 0 2rem #17252a) contrast(150%);
+    filter: drop-shadow(0 0 2rem #17252a) contrast(100%);
     z-index: 2; }
   .heading-hero .heading-hero__bearing {
     position: absolute;
     top: -0.4rem;
     left: -2.1rem;
     width: 12rem;
-    opacity: 0.7;
+    filter: contrast(50%);
     z-index: 1;
     transform-origin: 5.6rem 4rem;
-    animation: rotate-bearing 2s infinite; }
+    animation: rotate-bearing 4s infinite; }
   .heading-hero__heading1 {
+    color: #3aafa9;
     font-family: "Mulish", sans-serif;
     font-size: 5rem;
     font-weight: 900;
     margin: 1rem 4rem;
     text-transform: uppercase;
-    letter-spacing: 1rem;
-    text-shadow: 0 0 4rem #2d7a78; }
+    letter-spacing: 0.5rem;
+    text-shadow: 6px 6px 2rem #3aafa9; }
 
 @keyframes rotate-bearing {
   0% {
     transform: rotate(180deg); }
-  100% {
-    transform: rotate(-180deg); } }
+  50% {
+    transform: rotate(-360deg); } }
 
 .presence {
+  height: max-content;
+  padding: 3rem 0;
   display: flex;
   justify-content: center;
-  color: #3aafa9;
-  text-transform: uppercase;
+  align-items: center; }
+
+.presence p {
   font-size: 3rem;
-  font-weight: 600;
-  margin: 3rem 0;
-  width: 100%; }
-  @media (max-width: 75em) {
-    .presence {
-      font-size: 3rem; } }
-  @media (max-width: 56.25em) {
-    .presence {
-      flex-direction: column;
-      align-items: center; } }
+  padding: 0.5rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  text-align: center;
+  overflow: hidden; }
 
-.word-div {
-  text-align: left;
-  width: 20rem; }
+.presence p span.typed-text {
+  font-weight: normal;
+  color: white; }
 
-.word::before {
-  content: '';
-  font-family: "Caveat", cursive;
-  letter-spacing: 0.6rem;
-  color: #def2f1;
-  margin-left: 1rem;
-  font-style: italic;
-  animation: show 7s infinite; }
+.presence p span.cursor {
+  display: inline-block;
+  background-color: #ccc;
+  margin-left: 0.1rem;
+  width: 3px;
+  animation: blink 1s infinite; }
 
-@keyframes show {
+.presence p span.cursor.typing {
+  animation: none; }
+
+@keyframes blink {
   0% {
-    content: ' Creative!'; }
-  20% {
-    content: ' Unique!'; }
-  40% {
-    content: ' Professional!'; }
-  60% {
-    content: ' Impactful!'; }
-  80% {
-    content: ' Responsive!'; }
+    background-color: #ccc; }
+  49% {
+    background-color: #ccc; }
+  50% {
+    background-color: transparent; }
+  99% {
+    background-color: transparent; }
   100% {
-    content: ' Creative!'; } }
+    background-color: #ccc; } }
 
 .steps-section {
   margin: 3rem auto 1.5rem;
@@ -136,7 +134,7 @@ body {
 .step {
   display: flex;
   flex-direction: column;
-  height: max-content;
+  height: 37.5rem;
   width: 30rem;
   margin: 2rem 0;
   background-color: #feffff;
@@ -167,7 +165,7 @@ body {
       font-size: 2rem; } }
 
 .about-us {
-  padding: 1rem 5rem; }
+  padding: 1rem 0; }
   .about-us__container {
     display: flex;
     align-items: center;
@@ -176,7 +174,7 @@ body {
     margin: 0 auto;
     height: max-content;
     max-width: 120rem;
-    border-radius: 20px;
+    border-radius: 3px;
     overflow: hidden; }
     .about-us__container .bg-video {
       position: absolute;
@@ -316,11 +314,8 @@ body {
 
 .footer {
   background-color: #17252a;
-  padding: 1rem 3rem;
-  font-size: 1.8rem;
+  font-size: 1.3rem;
   text-align: center; }
-  .footer__logo-box {
-    margin-bottom: 1rem; }
   .footer__logo {
     width: 25rem;
     height: auto; }
