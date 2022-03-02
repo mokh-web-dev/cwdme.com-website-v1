@@ -45,7 +45,11 @@
     text-transform: uppercase;
     letter-spacing: 0.5rem;
 
-    text-shadow: 6px 6px 2rem $color-primary;
+    text-shadow: 4px 4px 1rem $color-primary;
+
+    @include respond(small-phone) {
+      font-size: 4rem;
+    }
   }
 }
 
@@ -68,7 +72,7 @@
 
 .presence p {
   font-size: 3rem;
-  padding: 0.5rem;
+  padding: 0.5rem 2rem;
   font-weight: bold;
   letter-spacing: 0.1rem;
   text-align: center;
@@ -129,8 +133,8 @@
 }
 
 .steps-heading {
-  padding-top: 1rem;
-  font-size: 4rem;
+  padding: 1rem 2rem 0;
+  font-size: 2.5rem;
   text-transform: uppercase;
   text-shadow: 0 0 4rem $color-primary-light;
 
@@ -185,7 +189,7 @@
 // About Us Section
 
 .about-us {
-  padding: 1rem 0;
+  // padding: 1rem 0;
 
   &__container {
     display: flex;
@@ -194,7 +198,7 @@
     position: relative;
     margin: 0 auto;
     height: max-content;
-    max-width: 120rem;
+    // max-width: 120rem;
     border-radius: 3px;
     overflow: hidden;
 
@@ -221,6 +225,7 @@
       justify-content: space-between;
       padding: 2rem;
       color: $color-primary-dark;
+      max-width: 120rem;
 
       @include respond(tab-port) {
         display: flex;
@@ -234,7 +239,7 @@
 
       & .component {
         padding: 3rem;
-        font-size: 2.5rem;
+        font-size: 2rem;
         width: 100%;
 
         &-heading {
@@ -256,7 +261,7 @@
         }
 
         & p {
-          font-size: 1.8rem;
+          font-size: 1.4rem;
         }
       }
     }
@@ -266,7 +271,7 @@
 // Contact Us Section
 
 .contact-us-section {
-  margin-top: 3rem;
+  // margin-top: 3rem;
   padding: 7rem;
   background-image: url(../img/texture-bg.jpg);
   background-size: cover;
