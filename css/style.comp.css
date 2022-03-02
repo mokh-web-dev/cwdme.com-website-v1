@@ -36,27 +36,16 @@ body {
   .heading-hero .logo-animation {
     align-self: flex-start;
     position: relative;
-    margin: 2rem 0 0 2rem; }
+    margin: 2rem 2rem; }
   .heading-hero__logo {
     position: relative;
-    width: 20rem;
-    filter: drop-shadow(0 0 2rem #17252a) contrast(100%);
-    z-index: 2; }
-  .heading-hero .heading-hero__bearing {
-    position: absolute;
-    top: -0.4rem;
-    left: -2.1rem;
-    width: 12rem;
-    filter: contrast(50%);
-    z-index: 1;
-    transform-origin: 5.6rem 4rem;
-    animation: rotate-bearing 4s infinite; }
+    width: 20rem; }
   .heading-hero__heading1 {
     color: #3aafa9;
     font-family: "Mulish", sans-serif;
     font-size: 5rem;
     font-weight: 900;
-    margin: 1rem 4rem;
+    margin: -1rem 4rem;
     text-transform: uppercase;
     letter-spacing: 0.5rem;
     text-shadow: 4px 4px 1rem #3aafa9; }
