@@ -50,3 +50,11 @@ document.addEventListener('DOMContentLoaded', function () {
   // On DOM Load initiate the effect
   if (textArray.length) setTimeout(type, newTextDelay + 250);
 });
+
+const parallax = document.querySelector('body');
+
+window.addEventListener('scroll', function () {
+  let offset = window.pageYOffset;
+
+  parallax.style.backgroundPositionY = offset * 0.7 + 'px';
+});

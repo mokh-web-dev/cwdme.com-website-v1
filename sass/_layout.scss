@@ -21,22 +21,8 @@
   &__logo {
     position: relative;
     width: 20rem;
-
-    // filter: drop-shadow(0 0 2rem $color-primary-darkest)
-    //   contrast(100%);
-    // z-index: 2;
   }
 
-  // .heading-hero__bearing {
-  //   position: absolute;
-  //   top: -0.4rem;
-  //   left: -2.1rem;
-  //   width: 12rem;
-  //   filter: contrast(50%);
-  //   z-index: 1;
-  //   transform-origin: 5.6rem 4rem;
-  //   animation: rotate-bearing 4s infinite;
-  // }
   &__heading1 {
     color: $color-primary;
     font-family: $font-heading;
@@ -120,7 +106,7 @@
 .steps-section {
   margin: 3rem auto 1.5rem;
   text-align: center;
-  background-color: $color-primary-light;
+  background-color: transparent;
   max-width: 130rem;
 }
 
@@ -135,9 +121,10 @@
 
 .steps-heading {
   padding: 1rem 2rem 0;
-  font-size: 2.5rem;
+  font-size: 3rem;
+  color: $color-primary-dark;
   text-transform: uppercase;
-  text-shadow: 0 0 4rem $color-primary-light;
+  text-shadow: 0 0 3px $color-primary;
 
   @include respond(phone) {
     font-size: 3rem;
@@ -200,8 +187,21 @@
     margin: 0 auto;
     height: max-content;
     // max-width: 120rem;
-    border-radius: 3px;
+    // border-radius: 3px;
     overflow: hidden;
+
+    &__container::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      content: '';
+      background-image: linear-gradient(
+        rgba($color-primary-lightest, 1),
+        rgba($color-primary-lightest, 1)
+      );
+    }
 
     & .bg-video {
       position: absolute;
@@ -209,8 +209,9 @@
       left: 0;
       height: 100%;
       width: 100%;
+      filter: opacity(25%);
       z-index: -1;
-      opacity: 0.2;
+      // opacity: 0.2;
       overflow: hidden;
 
       &__content {
@@ -224,9 +225,12 @@
     & .components {
       display: flex;
       justify-content: space-between;
-      padding: 2rem;
+      padding: 0 2rem;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
       color: $color-primary-dark;
       max-width: 120rem;
+      background-color: rgba($color-primary-lightest, 0.8);
 
       @include respond(tab-port) {
         display: flex;

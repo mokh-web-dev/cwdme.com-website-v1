@@ -78,7 +78,13 @@ html {
 body {
   font-family: $font-display;
   color: $color-primary;
-  background-color: $color-primary-light;
+  background-image: linear-gradient(
+      rgba($color-primary-lightest, 0.8),
+      rgba($color-primary-lightest, 0.8)
+    ),
+    url(../img/computer-parallax-bg2.jpg);
+  background-size: cover;
+  background-position: center;
 
   @include respond(tab-land) {
   }
