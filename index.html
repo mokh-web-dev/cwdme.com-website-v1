@@ -99,7 +99,8 @@
           <img src="img/testing.jpg" alt="" class="step-img" />
           <h3 class="step-heading">4 - Test</h3>
           <p class="step-p">
-            We perform intensive testing on the final product.
+            We perform intensive testing on the final layout ensuring
+            responsiveness on different devices.
           </p>
         </div>
         <div class="step">
@@ -120,7 +121,7 @@
         </div>
       </div>
     </section>
-    <section class="about-us">
+    <section class="about-us" id="section__about-us">
       <div class="about-us__container">
         <div class="bg-video">
           <!-- <video class="bg-video__content" autoplay muted loop>
@@ -177,22 +178,46 @@
           </div>
         </div>
       </div>
+      <div class="contact-us">
+        <p class="contact-us__p">
+          For pricing or further details, please send us a message
+          <a href="javascript:;" class="contact-us__p--here">here</a>
+          and we shall respond to you promptly.
+        </p>
+      </div>
     </section>
-    <section class="contact-us-section">
-      <div class="contact-us-container">
-        <div class="form-form">
+    <footer class="footer">
+      <div class="footer__logo-box">
+        <img
+          src="img/logo1.png"
+          alt="Full logo"
+          class="footer__logo"
+        />
+        <!-- <button class="btn__contact-us">CONTACT US</button> -->
+      </div>
+      <p class="footer__copyright">
+        &copy; Copyright 2022 Creative Web Development - Middle East.
+        All rights reserved.
+      </p>
+    </footer>
+    <div class="overlay hidden"></div>
+    <section class="popup hidden">
+      <div class="popup__container">
+        <div class="popup__container-left">
+          <h2 class="popup__heading">CONTACT US</h2>
           <form action="#" class="form">
-            <div class="contact-us__name form__group">
+            <div class="form__name form__group">
               <label for="name" class="form__label">Full Name</label>
               <input
                 type="text"
                 class="form-input"
                 placeholder="Full Name"
                 name="name"
+                autofocus
                 required
               />
             </div>
-            <div class="contact-us__email form__group">
+            <div class="form__email form__group">
               <label for="email" class="form__label"
                 >Email Address</label
               >
@@ -204,7 +229,7 @@
                 required
               />
             </div>
-            <div class="contact-us__text form__group">
+            <div class="form__textarea form__group">
               <label for="message" class="form__label">Message</label>
               <textarea
                 class="form-input form-message"
@@ -213,32 +238,20 @@
                 maxlength="500"
               ></textarea>
             </div>
-            <div class="contact-us__submit">
-              <button class="btn">SUBMIT &rarr;</button>
+            <div class="form__submit">
+              <button class="btn submit__btn">SUBMIT &rarr;</button>
             </div>
           </form>
         </div>
-        <div class="form-img">
+        <div class="popup__container-right">
+          <button class="popup__close">&times;</button>
           <img
             src="img/contact-us2.jpg"
             alt="conact us bricks"
-            class="form-img__img"
+            class="popup__img"
           />
         </div>
       </div>
     </section>
-    <footer class="footer">
-      <div class="footer__logo-box">
-        <img
-          src="img/logo1.png"
-          alt="Full logo"
-          class="footer__logo"
-        />
-      </div>
-      <p class="footer__copyright">
-        &copy; Copyright 2022 Creative Web Development - Middle East.
-        All rights reserved.
-      </p>
-    </footer>
   </body>
 </html>

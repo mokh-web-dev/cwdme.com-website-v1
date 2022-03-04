@@ -58,3 +58,30 @@ window.addEventListener('scroll', function () {
 
   parallax.style.backgroundPositionY = offset * 0.7 + 'px';
 });
+
+const btnHere = document.querySelector('.contact-us__p--here');
+const popupWindow = document.querySelector('.popup');
+const btnHereClose = document.querySelector('.popup__close');
+const overlay = document.querySelector('.overlay');
+const submitBtn = document.querySelector('.submit__btn');
+
+const toggleWindow = function () {
+  overlay.classList.toggle('hidden');
+  popupWindow.classList.toggle('hidden');
+};
+
+btnHere.addEventListener('click', function () {
+  toggleWindow();
+});
+
+btnHereClose.addEventListener('click', function () {
+  toggleWindow();
+});
+
+overlay.addEventListener('click', function () {
+  toggleWindow();
+});
+
+submitBtn.addEventListener('click', function () {
+  console.log(`Submit button clicked`);
+});
