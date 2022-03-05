@@ -21,7 +21,7 @@ html {
 body {
   font-family: "Space Mono", monospace;
   color: #3aafa9;
-  background-image: linear-gradient(rgba(254, 255, 255, 0.8), rgba(254, 255, 255, 0.8)), url(../img/computer-parallax-bg2.jpg);
+  background-image: linear-gradient(rgba(254, 255, 255, 0.8), rgba(254, 255, 255, 0.8)), url(../img/main-parallax-bg.webp);
   background-size: cover;
   background-position: center; }
 
@@ -32,7 +32,7 @@ body {
   text-align: center;
   padding: 0;
   margin: 0;
-  background-image: url(../img/swirl-bg.jpg);
+  background-image: url(../img/swirl-bg.webp);
   background-size: cover;
   width: 100%; }
   .heading-hero .logo-animation {
@@ -54,12 +54,6 @@ body {
     @media (max-width: 25em) {
       .heading-hero__heading1 {
         font-size: 4rem; } }
-
-@keyframes rotate-bearing {
-  0% {
-    transform: rotate(180deg); }
-  50% {
-    transform: rotate(-360deg); } }
 
 .presence {
   height: max-content;
