@@ -101,24 +101,22 @@ body {
   text-align: center;
   background-color: transparent;
   max-width: 130rem; }
-
-.steps-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(33rem, 1fr));
-  justify-content: space-around;
-  justify-items: center;
-  grid-gap: 2rem;
-  padding: 1rem 2rem 3rem; }
-
-.steps-heading {
-  padding: 1rem 2rem;
-  font-size: 3rem;
-  color: #2d7a78;
-  text-transform: uppercase;
-  text-shadow: 0 0 3px #3aafa9; }
-  @media (max-width: 37.5em) {
-    .steps-heading {
-      font-size: 3rem; } }
+  .steps-section .steps-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(33rem, 1fr));
+    justify-content: space-around;
+    justify-items: center;
+    grid-gap: 2rem;
+    padding: 1rem 2rem 3rem; }
+  .steps-section .steps-heading {
+    padding: 1rem 2rem;
+    font-size: 3rem;
+    color: #2d7a78;
+    text-transform: uppercase;
+    text-shadow: 0 0 3px #3aafa9; }
+    @media (max-width: 37.5em) {
+      .steps-section .steps-heading {
+        font-size: 3rem; } }
 
 .step {
   display: flex;
@@ -131,9 +129,13 @@ body {
   overflow: hidden;
   align-items: center;
   box-shadow: 0 0 1.5rem #3aafa9;
-  transition: all 0.2s; }
+  transition: all 0.3s; }
   .step:hover {
-    transform: scale(1.1); }
+    transform: scale(1); }
+  .step:hover .step-img {
+    width: 100%; }
+  .step:hover .step-p {
+    transform: scale(1); }
   .step-heading {
     display: flex;
     justify-content: center;
@@ -149,17 +151,18 @@ body {
   @media (max-width: 37.5em) {
     .step {
       height: max-content; } }
-
-.step-img {
-  width: 100%;
-  margin-bottom: 1rem; }
-
-.step-p {
-  font-size: 1.5rem;
-  padding: 1rem 2rem; }
-  @media (max-width: 37.5em) {
-    .step-p {
-      font-size: 2rem; } }
+  .step-img {
+    width: 45rem;
+    margin-bottom: 1rem;
+    transition: all 0.3s; }
+  .step-p {
+    transform: scale(0);
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    transition: all 0.3s; }
+    @media (max-width: 37.5em) {
+      .step-p {
+        font-size: 2rem; } }
 
 .about-us {
   display: flex;

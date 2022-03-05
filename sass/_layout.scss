@@ -98,26 +98,26 @@
   text-align: center;
   background-color: transparent;
   max-width: 130rem;
-}
 
-.steps-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(33rem, 1fr));
-  justify-content: space-around;
-  justify-items: center;
-  grid-gap: 2rem;
-  padding: 1rem 2rem 3rem;
-}
+  .steps-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(33rem, 1fr));
+    justify-content: space-around;
+    justify-items: center;
+    grid-gap: 2rem;
+    padding: 1rem 2rem 3rem;
+  }
 
-.steps-heading {
-  padding: 1rem 2rem;
-  font-size: 3rem;
-  color: $color-primary-dark;
-  text-transform: uppercase;
-  text-shadow: 0 0 3px $color-primary;
-
-  @include respond(phone) {
+  .steps-heading {
+    padding: 1rem 2rem;
     font-size: 3rem;
+    color: $color-primary-dark;
+    text-transform: uppercase;
+    text-shadow: 0 0 3px $color-primary;
+
+    @include respond(phone) {
+      font-size: 3rem;
+    }
   }
 }
 
@@ -133,10 +133,19 @@
   align-items: center;
   box-shadow: 0 0 1.5rem $color-primary;
 
-  transition: all 0.2s;
+  transition: all 0.3s;
 
   &:hover {
-    transform: scale(1.1);
+    transform: scale(1);
+  }
+
+  &:hover &-img {
+    // height: auto;
+    width: 100%;
+  }
+
+  &:hover &-p {
+    transform: scale(1);
   }
 
   &-heading {
@@ -160,19 +169,24 @@
   @include respond(phone) {
     height: max-content;
   }
-}
 
-.step-img {
-  width: 100%;
-  margin-bottom: 1rem;
-}
+  &-img {
+    // height: 30rem;
+    width: 45rem;
+    margin-bottom: 1rem;
+    transition: all 0.3s;
+  }
 
-.step-p {
-  font-size: 1.5rem;
-  padding: 1rem 2rem;
+  &-p {
+    transform: scale(0);
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
 
-  @include respond(phone) {
-    font-size: 2rem;
+    transition: all 0.3s;
+
+    @include respond(phone) {
+      font-size: 2rem;
+    }
   }
 }
 
