@@ -135,12 +135,17 @@
 
   transition: all 0.3s;
 
+  @include respond(phone) {
+    &:hover {
+      height: max-content;
+    }
+  }
+
   &:hover {
     transform: scale(1);
   }
 
   &:hover &-img {
-    // height: auto;
     width: 100%;
   }
 
@@ -166,10 +171,6 @@
     }
   }
 
-  @include respond(phone) {
-    height: max-content;
-  }
-
   &-img {
     // height: 30rem;
     width: 45rem;
@@ -182,7 +183,7 @@
     font-size: 1.5rem;
     padding: 1rem 2rem;
 
-    transition: all 0.3s;
+    transition: all 0.3s 0.1s;
 
     @include respond(phone) {
       font-size: 2rem;
