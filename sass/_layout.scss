@@ -110,7 +110,7 @@
 }
 
 .steps-heading {
-  padding: 1rem 2rem 0;
+  padding: 1rem 2rem;
   font-size: 3rem;
   color: $color-primary-dark;
   text-transform: uppercase;
@@ -139,6 +139,24 @@
     transform: scale(1.1);
   }
 
+  &-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2rem;
+    font-size: 2.5rem;
+
+    &__number {
+      width: 3.5rem;
+      height: 3.5rem;
+      fill: $color-primary;
+    }
+
+    &__text {
+      margin-left: 1rem;
+    }
+  }
+
   @include respond(phone) {
     height: max-content;
   }
@@ -147,12 +165,6 @@
 .step-img {
   width: 100%;
   margin-bottom: 1rem;
-}
-
-.step-heading {
-  text-transform: uppercase;
-  padding: 0 2rem;
-  font-size: 2.5rem;
 }
 
 .step-p {
