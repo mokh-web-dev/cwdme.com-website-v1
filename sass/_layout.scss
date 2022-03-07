@@ -314,6 +314,8 @@
   transform: translate(-50%, -50%);
 
   width: 100%;
+  max-width: 120rem;
+
   background-color: rgba(black, 0.4);
   z-index: 300;
   transition: all 0.5s;
@@ -396,7 +398,7 @@
         font-size: 3rem;
         color: $color-primary-darkest;
         text-decoration: none;
-        line-height: 1;
+        line-height: 30px;
         border: none;
         background-color: $color-primary-light;
         width: 30px;
