@@ -37,6 +37,7 @@
       href="img/only-bearing.webp"
     />
 
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script defer src="script.js"></script>
 
     <title>Creative Web Development - Middle East</title>
@@ -228,11 +229,12 @@
       <div class="popup__container">
         <div class="popup__container-left">
           <h2 class="popup__heading">CONTACT US</h2>
-          <form action="#" class="form">
+          <form class="form" reset()>
             <div class="form__name form__group">
               <label for="name" class="form__label">Full Name</label>
               <input
                 type="text"
+                id="name"
                 class="form-input"
                 placeholder="Full Name"
                 name="name"
@@ -246,6 +248,7 @@
               >
               <input
                 type="email"
+                id="email"
                 class="form-input"
                 placeholder="Email Address"
                 name="email"
@@ -255,6 +258,7 @@
             <div class="form__textarea form__group">
               <label for="message" class="form__label">Message</label>
               <textarea
+                id="message"
                 class="form-input form-message"
                 placeholder="Enter your message here"
                 name="message"
@@ -262,7 +266,9 @@
               ></textarea>
             </div>
             <div class="form__submit">
-              <button class="btn submit__btn">SUBMIT &rarr;</button>
+              <button type="submit" class="btn submit__btn">
+                SUBMIT &rarr;
+              </button>
             </div>
           </form>
         </div>
