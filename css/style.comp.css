@@ -19,22 +19,34 @@ html {
       font-size: 75%; } }
 
 body {
-  font-family: "Space Mono", monospace;
+  font-family: "Poppins", sans-serif;
   color: #3aafa9;
-  background-image: linear-gradient(rgba(254, 255, 255, 0.8), rgba(254, 255, 255, 0.8)), url(../img/main-parallax-bg.webp);
-  background-size: cover;
+  background-image: linear-gradient(rgba(254, 255, 255, 0.8), rgba(254, 255, 255, 0.8)), url(../img/main-bg-800px.webp);
+  background-size: contain;
+  background-repeat: no-repeat;
   background-position: center; }
+  @media (max-width: 37.5em) {
+    body {
+      background-image: none; } }
+  @media (max-width: 25em) {
+    body {
+      background-image: none; } }
 
 .heading-hero {
   position: relative;
   display: flex;
   flex-direction: column;
   text-align: center;
-  padding: 0;
+  padding-bottom: 6rem;
+  width: 100%;
   margin: 0;
   background-image: url(../img/swirl-bg.webp);
   background-size: cover;
-  width: 100%; }
+  clip-path: polygon(0 0, 100% 0%, 100% 85%, 0 100%); }
+  @media (max-width: 37.5em) {
+    .heading-hero {
+      clip-path: polygon(0 0, 100% 0%, 100% 95%, 0 100%);
+      padding-bottom: 3rem; } }
   .heading-hero .logo-animation {
     align-self: flex-start;
     position: relative;
@@ -42,18 +54,34 @@ body {
   .heading-hero__logo {
     position: relative;
     width: 20rem; }
-  .heading-hero__heading1 {
-    color: #3aafa9;
-    font-family: "Mulish", sans-serif;
-    font-size: 5rem;
-    font-weight: 900;
-    margin: -1rem 4rem;
-    text-transform: uppercase;
-    letter-spacing: 0.5rem;
-    text-shadow: 4px 4px 1rem #3aafa9; }
-    @media (max-width: 25em) {
-      .heading-hero__heading1 {
-        font-size: 4rem; } }
+  .heading-hero__heading {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto; }
+    .heading-hero__heading .heading1 {
+      color: #3aafa9;
+      font-family: "Poppins", sans-serif;
+      font-size: 5rem;
+      font-weight: 900;
+      margin: -1rem 4rem;
+      text-transform: uppercase;
+      letter-spacing: 1rem;
+      text-shadow: 0 0 12rem #def2f1; }
+      @media (max-width: 37.5em) {
+        .heading-hero__heading .heading1 {
+          font-size: 3.5rem; } }
+      @media (max-width: 25em) {
+        .heading-hero__heading .heading1 {
+          font-size: 2.5rem; } }
+    .heading-hero__heading .signature {
+      font-family: "Swanky and Moo Moo", cursive;
+      color: red;
+      font-size: 4rem;
+      margin: 0 2rem;
+      align-self: flex-end; }
+      @media (max-width: 25em) {
+        .heading-hero__heading .signature {
+          font-size: 2.5rem; } }
 
 .presence {
   height: max-content;
@@ -65,13 +93,17 @@ body {
 .presence p {
   font-size: 3rem;
   padding: 0.5rem 2rem;
-  font-weight: bold;
+  font-weight: 400;
   letter-spacing: 0.1rem;
   text-align: center;
   overflow: hidden; }
+  @media (max-width: 37.5em) {
+    .presence p {
+      font-size: 2rem; } }
 
 .presence p span.typed-text {
-  font-weight: normal;
+  font-style: italic;
+  font-family: "Architects Daughter", cursive;
   color: white; }
 
 .presence p span.cursor {
@@ -109,11 +141,10 @@ body {
     grid-gap: 2rem;
     padding: 1rem 2rem 3rem; }
   .steps-section .steps-heading {
-    padding: 1rem 2rem;
+    padding: 2rem 2rem;
     font-size: 3rem;
     color: #2d7a78;
-    text-transform: uppercase;
-    text-shadow: 0 0 3px #3aafa9; }
+    text-transform: uppercase; }
     @media (max-width: 37.5em) {
       .steps-section .steps-heading {
         font-size: 3rem; } }
@@ -164,73 +195,162 @@ body {
       .step-p {
         font-size: 2rem; } }
 
-.about-us {
+.projects {
   display: flex;
-  flex-direction: column; }
-  .about-us__container {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  background-color: rgba(222, 242, 241, 0.7);
+  clip-path: polygon(0 5%, 100% 0%, 100% 95%, 0 100%);
+  border-radius: 5px;
+  padding-bottom: 6rem; }
+  @media (max-width: 37.5em) {
+    .projects {
+      clip-path: polygon(0 2%, 100% 0%, 100% 98%, 0 100%); } }
+  .projects-header {
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
-    position: relative;
-    margin: 0 auto;
-    height: max-content;
-    overflow: hidden; }
-    .about-us__container__container::after {
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
+    align-items: center;
+    padding: 2rem 3rem 0;
+    max-width: 120rem; }
+    .projects-header .heading {
+      color: #2d7a78;
+      margin-top: 8rem;
+      font-size: 4rem;
+      text-transform: uppercase; }
+    .projects-header .heading-p {
+      text-align: center;
+      font-size: 2.5rem;
+      margin: 2rem; }
+  .projects .project {
+    display: flex;
+    max-width: 120rem;
+    margin: 2rem auto;
+    padding: 1rem 4rem; }
+    @media (max-width: 37.5em) {
+      .projects .project {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; } }
+    .projects .project .img-1 {
+      background-image: url(../img/nexter-screenshot.JPG); }
+    .projects .project .img-2 {
+      background-image: url(../img/trillo-screenshot.JPG); }
+    .projects .project .img-3 {
+      background-image: url(../img/forkify-screenshot.JPG); }
+    .projects .project .img-4 {
+      background-image: url(../img/naTours-screenshot.JPG); }
+    .projects .project-img {
+      background-size: 100%;
+      background-position: center top;
+      background-repeat: no-repeat;
       width: 100%;
-      content: '';
-      background-image: linear-gradient(#feffff, #feffff); }
-    .about-us__container .components {
-      display: flex;
-      justify-content: space-between;
-      padding: 0 2rem;
       border-radius: 5px;
-      color: #2d7a78;
-      max-width: 120rem;
-      background-color: rgba(222, 242, 241, 0.8); }
+      transition: all 0.5s;
+      margin-left: 4rem; }
       @media (max-width: 56.25em) {
-        .about-us__container .components {
-          display: flex;
-          flex-direction: column; } }
+        .projects .project-img {
+          background-position: left top; } }
       @media (max-width: 37.5em) {
-        .about-us__container .components {
-          display: flex;
-          flex-direction: column; } }
-      .about-us__container .components .component {
-        padding: 3rem;
+        .projects .project-img {
+          background-size: 100%;
+          background-position: center top;
+          background-repeat: no-repeat;
+          min-height: 25rem;
+          margin-top: 2rem;
+          margin-left: 0; } }
+      .projects .project-img:hover {
+        transform: scale(1.2); }
+    .projects .project-text {
+      font-size: 1.5rem;
+      max-width: 60%;
+      line-height: 3rem; }
+      @media (max-width: 37.5em) {
+        .projects .project-text {
+          max-width: 95%; } }
+      .projects .project-text .heading-container {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem; }
+      .projects .project-text .icon {
+        margin: 0;
+        width: 2.5rem;
+        height: 2.5rem;
+        fill: #3aafa9;
+        display: inline-block; }
+      .projects .project-text h3 {
         font-size: 2rem;
-        width: 100%; }
-        .about-us__container .components .component-heading {
-          display: flex;
-          align-items: center;
-          margin-bottom: 2rem; }
-          .about-us__container .components .component-heading__icon {
-            height: 3rem;
-            width: 3rem;
-            fill: #3aafa9;
-            margin-right: 1.5rem; }
-        .about-us__container .components .component h3 {
-          text-transform: uppercase; }
-        .about-us__container .components .component p {
-          font-size: 1.4rem; }
-  .about-us .contact-us {
-    text-align: center; }
-    .about-us .contact-us__p {
-      color: #2d7a78;
-      font-size: 2rem;
-      padding: 2rem;
-      max-width: 120rem;
-      margin: 0 auto; }
-      .about-us .contact-us__p--here {
-        color: red; }
-        .about-us .contact-us__p--here:link, .about-us .contact-us__p--here:visited {
+        display: inline-block;
+        text-transform: uppercase;
+        margin: 0 0.5rem; }
+        .projects .project-text h3 .project-link {
+          display: inline-block;
+          color: inherit;
           text-decoration: none;
           transition: all 0.5s; }
-        .about-us .contact-us__p--here:hover {
-          color: #2d7a78; }
+          .projects .project-text h3 .project-link:hover {
+            color: #2d7a78;
+            transform: scale(1.2) translateX(1.5rem); }
+
+.about-us__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 4rem auto 0;
+  height: max-content;
+  overflow: hidden; }
+  .about-us__container .components {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2rem;
+    border-radius: 5px;
+    color: #feffff;
+    max-width: 120rem;
+    background-color: rgba(45, 122, 120, 0.8); }
+    @media (max-width: 56.25em) {
+      .about-us__container .components {
+        display: flex;
+        flex-direction: column; } }
+    @media (max-width: 37.5em) {
+      .about-us__container .components {
+        display: flex;
+        flex-direction: column; } }
+    .about-us__container .components .component {
+      padding: 3rem;
+      font-size: 2rem;
+      width: 100%; }
+      .about-us__container .components .component-heading {
+        display: flex;
+        align-items: center;
+        margin-bottom: 2rem; }
+        .about-us__container .components .component-heading__icon {
+          height: 3rem;
+          width: 3rem;
+          fill: #def2f1;
+          margin-right: 1.5rem; }
+      .about-us__container .components .component h3 {
+        text-transform: uppercase; }
+      .about-us__container .components .component p {
+        font-size: 1.4rem; }
+
+.about-us .contact-us {
+  text-align: center; }
+  .about-us .contact-us__p {
+    color: #2d7a78;
+    font-size: 2rem;
+    padding: 2rem;
+    max-width: 120rem;
+    margin: 0 auto; }
+    .about-us .contact-us__p--here {
+      color: red; }
+      .about-us .contact-us__p--here:link, .about-us .contact-us__p--here:visited {
+        text-decoration: none;
+        transition: all 0.5s; }
+      .about-us .contact-us__p--here:hover {
+        color: #2d7a78; }
 
 .overlay {
   position: fixed;

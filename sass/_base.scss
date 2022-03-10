@@ -8,9 +8,10 @@ $color-primary-darkest: #17252a;
 $color-black: #101d2c;
 
 // FONT VARIABLES
-$font-heading: 'Mulish', sans-serif;
-$font-display: 'Space Mono', monospace;
-$font-word: 'Caveat', cursive;
+$font-heading: 'Poppins', sans-serif;
+$font-display: 'Poppins', sans-serif;
+$font-word: 'Architects Daughter', cursive;
+$font-sig: 'Swanky and Moo Moo', cursive;
 
 // Carousel Variables
 $size-height: 70vh;
@@ -82,16 +83,16 @@ body {
       rgba($color-primary-lightest, 0.8),
       rgba($color-primary-lightest, 0.8)
     ),
-    url(../img/main-parallax-bg.webp);
-  background-size: cover;
+    url(../img/main-bg-800px.webp);
+  background-size: contain;
+  background-repeat: no-repeat;
   background-position: center;
 
-  @include respond(tab-land) {
-  }
-
-  @include respond(tab-port) {
-  }
-
   @include respond(phone) {
+    background-image: none;
+  }
+
+  @include respond(small-phone) {
+    background-image: none;
   }
 }
