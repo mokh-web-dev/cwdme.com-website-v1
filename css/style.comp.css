@@ -235,13 +235,13 @@ body {
         justify-content: center;
         align-items: center; } }
     .projects .project .img-1 {
-      background-image: url(../img/nexter-screenshot.JPG); }
+      background-image: url(../img/nexter-screenshot.webp); }
     .projects .project .img-2 {
-      background-image: url(../img/trillo-screenshot.JPG); }
+      background-image: url(../img/trillo-screenshot.webp); }
     .projects .project .img-3 {
-      background-image: url(../img/forkify-screenshot.JPG); }
+      background-image: url(../img/forkify-screenshot.webp); }
     .projects .project .img-4 {
-      background-image: url(../img/naTours-screenshot.JPG); }
+      background-image: url(../img/naTours-screenshot.webp); }
     .projects .project-img {
       background-size: 100%;
       background-position: center top;
