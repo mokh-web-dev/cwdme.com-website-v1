@@ -203,7 +203,6 @@
   }
 
   &-img {
-    // height: 30rem;
     width: 45rem;
     margin-bottom: 1rem;
     transition: all 0.3s;
@@ -232,14 +231,7 @@
   margin: 0 auto 0;
   background-color: rgba($color-primary-light, 0.7);
   opacity: 0.9;
-  // clip-path: polygon(0 5rem, 100% 0%, 100% 95%, 0 100%);
-  // max-width: 120rem;
-  // border-radius: 5px;
-  // padding-bottom: 6rem;
 
-  @include respond(phone) {
-    // clip-path: polygon(0 2%, 100% 0%, 100% 98%, 0 100%);
-  }
   &-header {
     display: flex;
     flex-direction: column;
@@ -284,28 +276,12 @@
     }
   }
 
-  // .project-1 {
-  // }
-  // .project-2 {
-  // }
-  // .project-3 {
-  // }
-  // .project-4 {
-  // }
-
   .project {
     display: flex;
     align-items: center;
     max-width: 120rem;
     margin: 0 auto;
     padding: 5rem;
-    // clip-path: polygon(0 5rem, 100% 0%, 100% 80%, 0 100%);
-
-    // @include respond(phone) {
-    //   flex-direction: column;
-    //   justify-content: center;
-    //   align-items: center;
-    // }
 
     @include respond(tab-port) {
       flex-direction: column;
@@ -330,6 +306,7 @@
           filter: blur(0);
           transform: scale(1.05) translateY(-0.5rem);
           z-index: 10;
+          cursor: pointer;
         }
       }
       &:hover .project__img:not(:hover) {
@@ -406,30 +383,6 @@
         }
       }
 
-      // background-size: 100%;
-      // background-position: center top;
-      // background-repeat: no-repeat;
-      // width: 100%;
-      // border-radius: 5px;
-      // transition: all 0.5s;
-      // margin-left: 4rem;
-
-      // @include respond(tab-port) {
-      //   background-position: left top;
-      // }
-      // @include respond(phone) {
-      //   background-size: 100%;
-      //   background-position: center top;
-      //   background-repeat: no-repeat;
-      //   min-height: 25rem;
-      //   // width: auto;
-      //   margin-top: 2rem;
-      //   margin-left: 0;
-      // }
-      // &:hover {
-      //   transform: scale(1.2);
-      // }
-
       @include respond(phone) {
         margin-left: -8rem;
       }
@@ -486,7 +439,65 @@
           }
         }
       }
+
+      .project-link-btn {
+        color: $color-primary-lightest;
+        background-color: $color-primary-dark;
+        font-family: inherit;
+        font-size: 1.3rem;
+        letter-spacing: 0.2rem;
+        margin: 1.5rem 0 0;
+        padding: 0.7rem 1.8rem;
+        outline: none;
+        border: none;
+        text-decoration: none;
+        border-radius: 100px;
+        box-shadow: 0 0 10px rgba($color: black, $alpha: 0.5);
+        cursor: pointer;
+
+        &:hover {
+          transform: translateY(-1px);
+        }
+
+        &:active {
+          transform: translateY(0);
+        }
+      }
     }
+  }
+}
+
+// Image Modal
+
+.image-modal-section {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(4px);
+  z-index: 100;
+}
+
+#imageModal {
+  display: none;
+  position: fixed;
+  z-index: 300;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 90vw;
+  max-height: 80vh;
+  border-radius: 10px;
+
+  .modal-content {
+    border-radius: 10px;
+    margin: auto;
+    display: block;
+    width: 100%;
   }
 }
 

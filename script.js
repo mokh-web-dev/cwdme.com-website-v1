@@ -116,3 +116,29 @@ const sendMessage = function (name, email, message) {
     )
   );
 };
+
+// Project Images Zooming in and out
+
+const modalContent = document.querySelector('.modal-content');
+const imageModalSection = document.querySelector(
+  '.image-modal-section'
+);
+const imageModal = document.getElementById('imageModal');
+
+document.querySelectorAll('.project__img').forEach(function (image) {
+  image.addEventListener('click', function (e) {
+    e.preventDefault();
+    imageModalSection.style.display = 'block';
+    imageModal.style.display = 'block';
+    modalContent.src = image.src;
+  });
+});
+
+const modalCloseBtn = document.querySelector('.modal-close');
+
+imageModalSection.addEventListener('click', function (e) {
+  e.preventDefault();
+  imageModalSection.style.display = 'none';
+  imageModal.style.display = 'none';
+  modalContent.src = '';
+});
