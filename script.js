@@ -16,7 +16,7 @@ const newTextDelay = 2000; // Delay between current and next text
 let textArrayIndex = 0;
 let charIndex = 0;
 
-// Contact Us form cariables
+// Contact Us form variables
 
 const btnHere = document.querySelector('.contact-us__p--here');
 const popupWindow = document.querySelector('.popup');
@@ -62,6 +62,8 @@ document.addEventListener('DOMContentLoaded', function () {
   if (textArray.length) setTimeout(type, newTextDelay + 250);
 });
 
+// Background Parallax
+
 const parallax = document.querySelector('body');
 
 window.addEventListener('scroll', function () {
@@ -69,6 +71,8 @@ window.addEventListener('scroll', function () {
 
   parallax.style.backgroundPositionY = offset * 0.7 + 'px';
 });
+
+// Contact Form Functionality
 
 const toggleWindow = function () {
   overlay.classList.toggle('hidden');
