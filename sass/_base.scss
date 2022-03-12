@@ -80,19 +80,27 @@ body {
   font-family: $font-display;
   color: $color-primary;
   background-image: linear-gradient(
-      rgba($color-primary-lightest, 0.7),
-      rgba($color-primary-lightest, 0.7)
+      rgba($color-primary-lightest, 0.3),
+      rgba($color-primary-lightest, 0.3)
     ),
-    url(../img/main-bg-800px.webp);
+    url(../img/typing-bg-medium-webp.webp);
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center top;
 
   @include respond(phone) {
-    background-image: none;
+    background-image: linear-gradient(
+        rgba($color-primary-lightest, 0.7),
+        rgba($color-primary-lightest, 0.7)
+      ),
+      url(../img/typing-bg-small-webp.webp);
   }
 
   @include respond(small-phone) {
-    background-image: none;
+    background-image: linear-gradient(
+        rgba($color-primary-lightest, 0.7),
+        rgba($color-primary-lightest, 0.7)
+      ),
+      url(../img/typing-bg-small-webp.webp);
   }
 }
