@@ -94,6 +94,8 @@ body {
         rgba($color-primary-lightest, 0.7)
       ),
       url(../img/typing-bg-small-webp.webp);
+    background-size: auto auto;
+    background-position: center;
   }
 
   @include respond(small-phone) {
@@ -102,5 +104,7 @@ body {
         rgba($color-primary-lightest, 0.7)
       ),
       url(../img/typing-bg-small-webp.webp);
+    background-size: auto auto;
+    background-position: center;
   }
 }
