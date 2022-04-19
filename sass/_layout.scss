@@ -383,6 +383,33 @@
         }
       }
 
+      .project-4__img {
+        &-1 {
+          top: 20%;
+          left: 0;
+        }
+
+        &-2 {
+          top: -5%;
+          left: 15%;
+        }
+
+        &-3 {
+          top: 35%;
+          left: 25%;
+        }
+
+        &-4 {
+          top: 15%;
+          left: 40%;
+        }
+
+        &-5 {
+          top: 30%;
+          left: 55%;
+        }
+      }
+
       @include respond(phone) {
         margin-left: -8rem;
       }

@@ -304,6 +304,21 @@ body {
       .projects .project-img__container .project-3__img-5 {
         top: 30%;
         left: 55%; }
+      .projects .project-img__container .project-4__img-1 {
+        top: 20%;
+        left: 0; }
+      .projects .project-img__container .project-4__img-2 {
+        top: -5%;
+        left: 15%; }
+      .projects .project-img__container .project-4__img-3 {
+        top: 35%;
+        left: 25%; }
+      .projects .project-img__container .project-4__img-4 {
+        top: 15%;
+        left: 40%; }
+      .projects .project-img__container .project-4__img-5 {
+        top: 30%;
+        left: 55%; }
       @media (max-width: 37.5em) {
         .projects .project-img__container {
           margin-left: -8rem; } }
